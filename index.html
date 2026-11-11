@@ -507,18 +507,51 @@
     </p>
     <div class="card">
       <p>
-        <span lang="ko">App Store에 올라왔습니다. Google Play는 아직 심사 중입니다.</span>
-        <span lang="en">Out now on the App Store. Google Play is still in review.</span>
+        <span lang="ko">App Store와 Google Play 모두 받을 수 있습니다.</span>
+        <span lang="en">Available now on the App Store and Google Play.</span>
       </p>
       <p style="margin-top:0.75rem">
         <!--
-        나라를 붙이지 않은 주소입니다. 애플이 보는 사람의 스토어로 보내주므로
-        한국 밖에서 열어도 "이 나라에서는 볼 수 없습니다"가 나오지 않습니다.
+        애플 주소에는 나라를 붙이지 않았습니다. 애플이 보는 사람의 스토어로
+        보내주므로 한국 밖에서 열어도 "이 나라에서는 볼 수 없습니다"가 나오지
+        않습니다. Play 주소는 패키지 이름으로 찾아가므로 나라와 무관합니다.
         -->
         <span lang="ko"><a href="https://apps.apple.com/app/id6830497569">App Store에서 받기</a> ·
-          Google Play: <span class="todo">링크 준비 중</span></span>
+          <a href="https://play.google.com/store/apps/details?id=com.wooni.failmuseum.app">Google
+            Play에서 받기</a></span>
         <span lang="en"><a href="https://apps.apple.com/app/id6830497569">Download on the App
-          Store</a> · Google Play: <span class="todo">coming soon</span></span>
+          Store</a> ·
+          <a href="https://play.google.com/store/apps/details?id=com.wooni.failmuseum.app">Get it on
+            Google Play</a></span>
+      </p>
+      <!--
+      QR 은 scripts/make-qr.swift 로 만든 파일입니다. 외부 QR 서비스를 걸지 않습니다 —
+      서비스가 죽으면 깨지고, 페이지를 여는 사람의 요청이 제3자에게 흘러갑니다.
+      두 개를 나란히 두되 좁은 화면에서는 줄바꿈되게 flex-wrap 을 씁니다.
+      -->
+      <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:1.5rem">
+        <figure style="margin:0">
+          <a href="https://apps.apple.com/app/id6830497569">
+            <img src="qr-appstore.png" width="160" height="160"
+              style="display:block;border-radius:10px"
+              alt="App Store에서 실패 박물관 받기 QR 코드">
+          </a>
+          <figcaption style="margin-top:0.4rem;color:var(--ink-2);font-size:0.9em">App Store
+          </figcaption>
+        </figure>
+        <figure style="margin:0">
+          <a href="https://play.google.com/store/apps/details?id=com.wooni.failmuseum.app">
+            <img src="qr-play.png" width="160" height="160"
+              style="display:block;border-radius:10px"
+              alt="Google Play에서 실패 박물관 받기 QR 코드">
+          </a>
+          <figcaption style="margin-top:0.4rem;color:var(--ink-2);font-size:0.9em">Google Play
+          </figcaption>
+        </figure>
+      </div>
+      <p style="margin-top:0.75rem;color:var(--ink-2);font-size:0.9em">
+        <span lang="ko">휴대전화 카메라로 QR을 비추면 해당 스토어로 바로 갑니다.</span>
+        <span lang="en">Point your phone camera at a code to open that store.</span>
       </p>
     </div>
   </section>
